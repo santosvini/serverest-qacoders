@@ -47,7 +47,7 @@ jobs:
         if: always()
         with:
           name: results-tests
-          path: /results
+          path: results/
 
       - run: echo "🧪 Settings GithubPages 🧪"
       - name: Configure Github Pages
