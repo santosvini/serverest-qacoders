@@ -47,16 +47,16 @@ jobs:
         if: always()
         with:
           name: api-report
-          path: results/
+          path: /results
 
       - run: echo "🧪 Settings GithubPages 🧪"
       - name: Configure Github Pages
-        uses: actions/configure-pages@v5.0.0
+        uses: actions/configure-pages@v5
         if: always()
 
       - run: echo "✅ Upload Page Artifacts ✅"
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v3
         if: always()
         with:
           name: results/
@@ -64,5 +64,5 @@ jobs:
       - run: echo "🚀 Deploy Report Tests 🚀"
       - name: Deploy Github Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v4
         if: always()
