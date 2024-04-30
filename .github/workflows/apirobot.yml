@@ -20,7 +20,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://santosvini7.github.io/serverest-qacoders/report_html
+      url: https://santosvini.github.io/serverest-qacoders/report_html
 
     steps:
       - run: echo "🚀 Clone repository on virtual machine 🚀"
