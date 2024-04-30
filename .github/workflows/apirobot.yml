@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: api-report
+          name: results-tests
           path: /results
 
       - run: echo "🧪 Settings GithubPages 🧪"
@@ -55,11 +55,11 @@ jobs:
         if: always()
 
       - run: echo "✅ Upload Page Artifacts ✅"
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         if: always()
         with:
-          name: results/
+          path: results/
 
       - run: echo "🚀 Deploy Report Tests 🚀"
       - name: Deploy Github Pages
