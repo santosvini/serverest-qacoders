@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main]
   
-#workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -47,7 +47,7 @@ jobs:
         if: always()
         with:
           name: results-tests
-          path: /results
+          path: results/
 
       - run: echo "🧪 Settings GithubPages 🧪"
       - name: Configure Github Pages
